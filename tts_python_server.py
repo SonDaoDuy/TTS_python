@@ -35,21 +35,11 @@ class TTSPythonServicer(first_service_pb2_grpc.TTSPythonServicer):
     """Provides methods that implement functionality of route guide server."""
 
     def __init__(self):
-        # self.engine = pyttsx3.init()
-        # self.engine.setProperty('rate', 170)
         self.voice_output = './voice_output_server'
         if not os.path.isdir(self.voice_output):
             os.mkdir(self.voice_output)
 
-    # def get_speech(self, text):
-    #     hash_len = 10 if len(text) > 10 else len(text)
-    #     file_name = os.path.join(self.voice_output, str(hash(text[:hash_len])) + '.wav')
-    #     self.engine.save_to_file(text, file_name)
-    #     self.engine.runAndWait()
-    #     return file_name
-
     def ConvertTTS(self, request, context):
-        # speech_file = self.get_speech(request.text)
         text = request.text
         myobj = gTTS(text=text, lang='en', slow=False)
         hash_len = 10 if len(text) > 10 else len(text)
@@ -62,13 +52,6 @@ class TTSPythonServicer(first_service_pb2_grpc.TTSPythonServicer):
             print(
                 "Received message of size %s" % (a)
             )
-        # print("sending %s to client" % (fs))
-        # speech_response = first_service_pb2.SpeechResponse(
-        #     data=audio_data
-        #     )
-        # if self.engine._inLoop:
-        #     self.engine.endLoop()
-        # return speech_response
         
         return first_service_pb2.SpeechResponse(data=audio_data)
 

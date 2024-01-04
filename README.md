@@ -2,7 +2,7 @@
 
 
 # Installation
-Refer to libraries.md to install necesary libraries.
+Refer to [libraries.md] (./libraries.md) to install necesary libraries.
 
 # Run demo
 
@@ -20,5 +20,5 @@ python tts_python_server.py
 
 Open another terminal tab and run this line:
 ```
-python tts_python_client.py
+python tts_python_client.py -o voice_output_client -t <text input to convert to speech>
 ```

@@ -55,16 +55,6 @@ def convert_tts(stub, args):
     save_file = os.path.join(args.output, str(hash(text[:hash_len])) + '.wav')
     with open(save_file, "wb") as binary_file:
         binary_file.write(responses.data)
-    # for response in responses:
-    #     print(
-    #         "Received message of type %s" % (type(response.data))
-    #     )
-    #     a = sys.getsizeof(response.data)
-    #     print(
-    #         "Received message of size %s" % (a)
-    #     )
-    #     with open(save_file, "wb") as binary_file:
-    #         binary_file.write(response.data)
         
 
 
