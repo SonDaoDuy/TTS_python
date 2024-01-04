@@ -11,11 +11,7 @@ class TextMessage(_message.Message):
     def __init__(self, text: _Optional[str] = ...) -> None: ...
 
 class SpeechResponse(_message.Message):
-    __slots__ = ("data", "data_shape", "frame_rate")
+    __slots__ = ("data",)
     DATA_FIELD_NUMBER: _ClassVar[int]
-    DATA_SHAPE_FIELD_NUMBER: _ClassVar[int]
-    FRAME_RATE_FIELD_NUMBER: _ClassVar[int]
     data: bytes
-    data_shape: str
-    frame_rate: int
-    def __init__(self, data: _Optional[bytes] = ..., data_shape: _Optional[str] = ..., frame_rate: _Optional[int] = ...) -> None: ...
+    def __init__(self, data: _Optional[bytes] = ...) -> None: ...
