@@ -21,13 +21,9 @@ service TTSPython{
 }
 
 message TextMessage {
-  // The name of the feature.
   string text = 1;
 }
 
 message SpeechResponse {
   bytes data = 1;
-  string data_shape = 2;
-  int64 frame_rate = 3;
-
 }
