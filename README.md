@@ -2,7 +2,7 @@
 
 
 # Installation
-Refer to [libraries.md] (libraries.md) to install necesary libraries.
+Refer to [libraries.md](libraries.md) to install necesary libraries.
 
 # Run demo
 
@@ -10,7 +10,7 @@ The repo provide an example client request to convert text to speech then save t
 
 Server receive the text request, create the audio file, save a copy in server side then return information to client.
 
-(Please refer to [command.md] (command.md) for more useful commands.)
+(Please refer to [command.md](command.md) for more useful commands.)
 
 In one termianl tab, run this line:
 ```
